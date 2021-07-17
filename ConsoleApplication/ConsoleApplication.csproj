@@ -61,6 +61,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AutoFac\AutowiredAttribute.cs" />
+    <Compile Include="AutoFac\AutowiredPropertySelector.cs" />
     <Compile Include="Dao\DaoImpl.cs" />
     <Compile Include="Dao\IDao.cs" />
     <Compile Include="Logic\ILogic.cs" />
