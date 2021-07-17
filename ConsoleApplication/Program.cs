@@ -14,23 +14,32 @@ namespace ConsoleApplication
         {
             var containerBuilder = new ContainerBuilder();
             containerBuilder
-                .RegisterType<DaoImpl>()
-                .As<IDao>();
-            containerBuilder
-                .RegisterType<ServiceImpl>()
-                .PropertiesAutowired(new AutowiredPropertySelector())
-                .As<IService>();
-            containerBuilder
                 .RegisterType<LogicImpl>()
                 .PropertiesAutowired(new AutowiredPropertySelector())
                 .As<ILogic>();
+            containerBuilder
+                .RegisterType<NewLogicImpl>()
+                .PropertiesAutowired(new AutowiredPropertySelector())
+                .Keyed<ILogic>(LogicType.LOGIC2)
+                .PreserveExistingDefaults();
 
             var container = containerBuilder.Build();
-            var dao = container.Resolve<ILogic>();
+            var logic = container.Resolve<ILogic>();
+            Console.WriteLine("logic:");
+            logic.Test();
 
-            dao.Test();
+            var logic2 = container.ResolveKeyed<ILogic>(LogicType.LOGIC2);
+            Console.WriteLine("logic2:");
+            logic2.Test();
 
             Console.ReadKey();
+        }
+
+        public enum LogicType
+        {
+            LOGIC_DEFAULT,
+
+            LOGIC2,
         }
     }
 }
