@@ -1,4 +1,5 @@
 ﻿using ConsoleApplication.Dao;
+using ConsoleApplication.Other;
 
 namespace ConsoleApplication.Service
 {

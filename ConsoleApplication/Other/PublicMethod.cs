@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ConsoleApplication
+namespace ConsoleApplication.Other
 {
     internal static class PublicMethod
     {

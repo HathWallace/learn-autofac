@@ -1,21 +1,23 @@
 ﻿using System;
 using Autofac;
-using ConsoleApplication.AutoFac;
-using ConsoleApplication.Logic;
+using ConsoleApplication.Dao;
 
 namespace ConsoleApplication
 {
     class Program
     {
-        [Autowired]
-        private static ILogic Logic { get; set; }
-
         static void Main(string[] args)
         {
-            var autofacModuleImpl = new AutofacModuleImpl();
-            autofacModuleImpl.StartUp();
+            var containerBuilder = new ContainerBuilder();
+            containerBuilder
+                .RegisterType<DaoImpl>()
+                .As<IDao>();
 
-            Logic.Test();
+            var container = containerBuilder.Build();
+            var dao = container.Resolve<IDao>();
+
+            dao.Test();
+
             Console.ReadKey();
         }
     }

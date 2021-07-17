@@ -1,4 +1,6 @@
-﻿namespace ConsoleApplication.Dao
+﻿using ConsoleApplication.Other;
+
+namespace ConsoleApplication.Dao
 {
     public class DaoImpl : IDao
     {

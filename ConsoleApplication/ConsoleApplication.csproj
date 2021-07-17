@@ -61,18 +61,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AutoFac\AutofacModule.cs" />
-    <Compile Include="AutoFac\AutofacModuleImpl.cs" />
-    <Compile Include="AutoFac\AutowiredPropertySelector.cs" />
-    <Compile Include="AutoFac\AutowiredAttribute.cs" />
-    <Compile Include="AutoFac\Startup.cs" />
     <Compile Include="Dao\DaoImpl.cs" />
     <Compile Include="Dao\IDao.cs" />
     <Compile Include="Logic\ILogic.cs" />
     <Compile Include="Logic\LogicImpl.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PublicMethod.cs" />
+    <Compile Include="Other\PublicMethod.cs" />
     <Compile Include="Service\IService.cs" />
     <Compile Include="Service\ServiceImpl.cs" />
   </ItemGroup>
@@ -80,6 +75,7 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
