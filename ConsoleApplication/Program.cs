@@ -17,7 +17,7 @@ namespace ConsoleApplication
             containerBuilder
                 .RegisterAssemblyTypes(executingAssembly)
                 .AsImplementedInterfaces()
-                .PropertiesAutowired()
+                .PropertiesAutowired(new AutowiredPropertySelector())
                 .SingleInstance();
 
             var container = containerBuilder.Build();

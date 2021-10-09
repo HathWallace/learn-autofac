@@ -6,6 +6,7 @@ namespace ConsoleApplication.Service
 {
     public class ServiceImpl : IService
     {
+        [Autowired]
         private IDao Dao { get; set; }
 
         public void Test()
