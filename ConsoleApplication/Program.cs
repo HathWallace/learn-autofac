@@ -13,33 +13,18 @@ namespace ConsoleApplication
         static void Main(string[] args)
         {
             var containerBuilder = new ContainerBuilder();
+            var executingAssembly = Assembly.GetExecutingAssembly();
             containerBuilder
-                .RegisterType<LogicImpl>()
-                .PropertiesAutowired(new AutowiredPropertySelector())
-                .As<ILogic>();
-            containerBuilder
-                .RegisterType<NewLogicImpl>()
-                .PropertiesAutowired(new AutowiredPropertySelector())
-                .Keyed<ILogic>(LogicType.LOGIC2)
-                .PreserveExistingDefaults();
+                .RegisterAssemblyTypes(executingAssembly)
+                .AsImplementedInterfaces()
+                .PropertiesAutowired()
+                .SingleInstance();
 
             var container = containerBuilder.Build();
             var logic = container.Resolve<ILogic>();
-            Console.WriteLine("logic:");
             logic.Test();
 
-            var logic2 = container.ResolveKeyed<ILogic>(LogicType.LOGIC2);
-            Console.WriteLine("logic2:");
-            logic2.Test();
-
             Console.ReadKey();
-        }
-
-        public enum LogicType
-        {
-            LOGIC_DEFAULT,
-
-            LOGIC2,
         }
     }
 }

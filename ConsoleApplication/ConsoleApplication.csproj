@@ -67,7 +67,6 @@
     <Compile Include="Dao\IDao.cs" />
     <Compile Include="Logic\ILogic.cs" />
     <Compile Include="Logic\LogicImpl.cs" />
-    <Compile Include="Logic\NewLogicImpl.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Other\PublicMethod.cs" />
