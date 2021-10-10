@@ -1,4 +1,4 @@
-﻿namespace ConsoleApplication.Dao
+﻿namespace InterfaceLib
 {
     public interface IDao
     {

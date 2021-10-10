@@ -1,4 +1,4 @@
-﻿namespace ConsoleApplication.Logic
+﻿namespace InterfaceLib
 {
     public interface ILogic
     {

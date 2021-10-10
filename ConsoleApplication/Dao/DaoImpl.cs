@@ -1,4 +1,5 @@
 ﻿using ConsoleApplication.Other;
+using InterfaceLib;
 
 namespace ConsoleApplication.Dao
 {

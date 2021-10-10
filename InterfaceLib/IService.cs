@@ -1,4 +1,4 @@
-﻿namespace ConsoleApplication.Service
+﻿namespace InterfaceLib
 {
     public interface IService
     {
