@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IDao.cs" />
+    <Compile Include="IInsertLogic.cs" />
     <Compile Include="ILogic.cs" />
     <Compile Include="ILogic1.cs" />
     <Compile Include="ILogic2.cs" />

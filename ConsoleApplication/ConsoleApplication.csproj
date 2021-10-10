@@ -64,9 +64,9 @@
     <Compile Include="AutoFac\AutowiredAttribute.cs" />
     <Compile Include="AutoFac\AutowiredPropertySelector.cs" />
     <Compile Include="Dao\DaoImpl.cs" />
+    <Compile Include="Logic\InsertLogicImpl.cs" />
     <Compile Include="Logic\Logic1Impl.cs" />
     <Compile Include="Logic\Logic2Impl.cs" />
-    <Compile Include="Logic\Logic3Impl.cs" />
     <Compile Include="Logic\LogicImpl.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -83,6 +83,7 @@
       <Name>InterfaceLib</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
