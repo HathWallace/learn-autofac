@@ -1,29 +1,36 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using Autofac;
+using ConsoleApplication.AutoFac;
 
-namespace ConsoleApplication.AutoFac
+namespace WindowsFormsApplication
 {
     public static class AutoFacStartUp
     {
-        private static readonly ContainerBuilder _builder;
         private static readonly IContainer _container;
 
         static AutoFacStartUp()
         {
-            _builder = new ContainerBuilder();
+            var builder = new ContainerBuilder();
+
+            var test = Assembly
+                .GetExecutingAssembly()
+                .GetReferencedAssemblies()
+                .Where(an => an.GetPublicKeyToken().Length == 0)
+                .ToArray();
 
             var assemblies = AppDomain
                 .CurrentDomain
                 .GetAssemblies();
-            _builder
+            builder
                 .RegisterAssemblyTypes(assemblies)
                 .AsImplementedInterfaces()
                 .AsSelf()
                 .PropertiesAutowired(new AutowiredPropertySelector(), true)
                 .SingleInstance();
-            _container = _builder.Build();
+            _container = builder.Build();
         }
 
         public static T Resolve<T>()

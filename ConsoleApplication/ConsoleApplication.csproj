@@ -83,6 +83,10 @@
       <Project>{C3A0D59A-8EB3-420C-84C7-97ECC9EF464A}</Project>
       <Name>InterfaceLib</Name>
     </ProjectReference>
+    <ProjectReference Include="..\TestClassLibrary\TestClassLibrary.csproj">
+      <Project>{a5778526-e00e-4640-9acb-07f83711cb38}</Project>
+      <Name>TestClassLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
