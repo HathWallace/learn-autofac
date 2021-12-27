@@ -29,14 +29,18 @@ namespace WindowsFormsApplication
                 .RegisterAssemblyTypes(assemblies)
                 .AsImplementedInterfaces()
                 .AsSelf()
-                .PropertiesAutowired(new AutowiredPropertySelector(), true)
-                .SingleInstance();
+                .PropertiesAutowired(new AutowiredPropertySelector(), true);
             _container = builder.Build();
         }
 
         public static T Resolve<T>()
         {
             return _container.Resolve<T>();
+        }
+
+        public static object Resolve(Type type)
+        {
+            return _container.Resolve(type);
         }
     }
 }
