@@ -4,6 +4,7 @@ using System.Linq;
 using System.Reflection;
 using Autofac;
 using ConsoleApplication.AutoFac;
+using TestClassLibrary;
 
 namespace WindowsFormsApplication
 {

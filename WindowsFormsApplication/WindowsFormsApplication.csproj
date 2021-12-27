@@ -112,6 +112,10 @@
       <Project>{C3A0D59A-8EB3-420C-84C7-97ECC9EF464A}</Project>
       <Name>InterfaceLib</Name>
     </ProjectReference>
+    <ProjectReference Include="..\TestClassLibrary\TestClassLibrary.csproj">
+      <Project>{A5778526-E00E-4640-9ACB-07F83711CB38}</Project>
+      <Name>TestClassLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
